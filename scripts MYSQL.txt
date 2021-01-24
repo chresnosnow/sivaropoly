@@ -1,0 +1,28 @@
+MY SQL TABLES
+use jugadores;
+create table roles(
+    id_jugador INT not NULL primary key auto_increment,
+    cuenta VARCHAR(10),
+    saldo INT);
+	INSERT INTO `roles`(`id_jugador`, `cuenta`, `saldo`) VALUES ('', 'moto', '0')
+	('', 'el_bus', '0')('', 'la_micro', '0')('', 'taxi', '0')
+	('', 'camion', '0')('', 'carro', '0')
+	
+	<?php
+echo 'Estado de la Conexión:  ';
+$enlace =  mysql_connect('localhost', 'root', '', 'jugadores');
+if (!$enlace) {
+    die('No pudo conectarse: ' . mysql_error());
+}
+echo 'Conectado satisfactoriamente';
+mysql_close($enlace);
+?>
+
+UPDATE `roles` SET `saldo`= '0' WHERE id_jugador = '2'
+UPDATE `roles` SET `saldo`= '0' WHERE id_jugador = '3'
+UPDATE `roles` SET `saldo`= '0' WHERE id_jugador = '4'
+UPDATE `roles` SET `saldo`= '0' WHERE id_jugador = '5'
+UPDATE `roles` SET `saldo`= '0' WHERE id_jugador = '6'
+UPDATE `roles` SET `saldo`= '0' WHERE id_jugador = '7'
+
+UPDATE `roles` SET `saldo`= 0 WHERE `id_jugador`= 2
